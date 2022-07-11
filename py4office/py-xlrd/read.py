@@ -7,3 +7,4 @@ xlsx = xlrd.open_workbook('py4office/7月下旬入库表.xlsx')
 sheet = xlsx.sheet_by_index(0)
 
 print(sheet.cell_value(0,0))
+
