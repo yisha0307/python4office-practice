@@ -37,3 +37,15 @@ cheeseshop("Limburger", "It's very runny, sir.",
            shopkeeper="Michael Palin",
            client="John Cleese",
            sketch="Cheese Shop Sketch")
+
+# 普通函数
+def standard_arg(arg):
+    print(arg)
+
+# 仅限位置参数
+def pos_only_arg(arg, /):
+    print(arg)
+
+#仅限关键字参数
+def kw_only_arg(*, arg):
+    print(arg)
