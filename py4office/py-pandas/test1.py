@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import json
 
 URL = 'https://static.runoob.com/download/sites.json'
@@ -14,3 +15,9 @@ with open(PD_PATH, 'r') as f:
     data =json.loads(f.read())
 df_nested_data = pd.json_normalize(data, record_path=['students'], meta = ['school_name', 'class'])  #record_path用于展开studebts子集
 print(df_nested_data)
+
+dates = pd.date_range('20220713', periods=6)
+print(dates)
+
+df = pd.DataFrame(np.random.randn(6,4), index=dates, columns=list('ABCD'))
+print(df)
