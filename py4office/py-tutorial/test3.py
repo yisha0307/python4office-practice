@@ -74,3 +74,21 @@ print(flattened_list)
 strings = ['foo', 'card', 'bar', 'aaaa', 'abab']
 strings.sort(key = lambda x : len(set(x)))
 print(strings)
+
+# 迭代器&&生成器
+gen = (x**2 for x in range(100))
+print(gen)
+
+def _make_gen():
+    for x in range(100):
+        yield x **2
+gen = _make_gen()
+print(gen)
+# 直到请求生成器里的代码，才会执行
+for x in gen:
+    print(x, end=' ')
+
+aa = sum(x ** 2 for x in range(10))
+bb = dict({(i, i** 2) for i in range(10)})
+print(aa)
+print(bb)
