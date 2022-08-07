@@ -21,3 +21,5 @@ print(df)
 
 aa = df.unstack('state')
 print(aa)
+bb = aa.stack('side')
+print(bb)
