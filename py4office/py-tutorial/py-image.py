@@ -14,13 +14,13 @@ def isfloat(x):
     else:
         return True
 
-img = 'data\88888.png'
+img = 'py4office/py-tutorial/data/88888.png'
 
 data = pytesseract.image_to_string(img, lang='chi_sim').replace('[', '|').replace(']', '|').replace('}', '|').replace('{', '|').replace(',', '.')
 data = data.split('\n')
 data = [x for x in data if len(x)]
 # print(data)
-data = data[7:]
+# data = data[7:]
 table = np.zeros([100,20])
 for index in range(len(data)):
     line = data[index].split('|')
@@ -48,4 +48,4 @@ for index in range(len(data)):
 
 # print(table)
 df = pd.DataFrame(table)
-df.to_excel('result\/test2.xlsx')
+df.to_excel('py4office/py-tutorial/result/result.xlsx')
