@@ -8,12 +8,13 @@ import numpy as np
 
 # for i in a:
     # print(i)
-plt.rcParams['font.family'] = ['PingFang HK']
+plt.rcParams['font.family'] = ['PingFang HK']  # 设定中文字体
 # zhfont = matplotlib.font_manager.FontProperties(fname="py4office/py-tutorial/data/SourceHanSansSC-Bold.otf") 
 xpoints = np.array([0,6])
 ypoints = np.array([0, 100])
 plt.plot(xpoints, ypoints, 'k:')
-plt.title('医院分析')
+plt.grid()  # 网格线
+plt.title('医院分析', fontdict={'color': 'darkred', 'size': 15}, loc='left')
 # plt.show() 这行run之后可以显示出来图形
 
 # data = np.arange(10)
