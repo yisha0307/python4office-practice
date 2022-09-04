@@ -41,3 +41,9 @@ def clear_strings(strings, ops):
         result = map(function, strings)
     return result
 
+# 匿名函数 lambda
+ann = lambda x:x*2
+arr = [2,4,5]
+arr_list = list(map(ann, arr))
+print(arr_list)
+

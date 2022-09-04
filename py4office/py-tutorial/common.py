@@ -24,3 +24,9 @@ def add_sheet(df, path, sheet_name):
         writer = pd.ExcelWriter(path, mode='w')
     df.to_excel(writer, sheet_name)
     writer.save()
+
+# apply函数到arr的每一个值
+def apply_to_list(list, func):
+    return [func(x) for x in list]
+# ins = ['HSIDa','aDOUHW','sifdhwAA']
+# print(apply_to_list(ins, str.title))
