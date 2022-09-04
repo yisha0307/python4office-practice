@@ -26,3 +26,29 @@ print(arr)
 # 神奇索引：一次选中多行
 picked = arr[[4,3,7,1]]
 print(picked)
+
+# 通用函数（快速的逐元素数组函数）
+rrr = np.arange(10)
+# 一元通用函数 np.method(x) @x：np.narray
+print(np.sqrt(rrr)) # 平方根， 还有类似np.exp(x), np.abs(x)， np.ceil(x), np.floor(x)等, 详见p108
+# 二元通用函数 np.method(x,y) @x,y: np.narray
+result = np.add(rrr, rrr)  # 元素逐个相加，还有np.subtract(x,y), np.multiply/divide/power/maximum/minimum... 详见p108
+print(result)
+
+# 将条件逻辑作为数组操作
+xarr = np.array([1.1,1.2,1.3,1.4,1.5])
+yarr = np.array([2.1,2.2,2.3,2.4,2.5])
+cond = np.array([True, False, True, False, False])
+resull = np.where(cond, xarr, yarr)  # np.where(condition, true-value, false-value) 有点类似 true-value if condition else false-value
+print(resull)
+
+# 数学和统计方法 详见p111
+rawarr = np.random.randn(5, 4)
+aa = rawarr.mean()  # 求所有数字的平均值
+bb = np.mean(rawarr)
+print(aa, bb)
+cc = np.sum(rawarr) # 求所有数字的总和
+print(cc)
+
+dd  = np.mean(rawarr, axis=1) #加上axis = 0或者1可以算出每列或者每行上的平均值 np.sum(arr, axis=0) 每一列的和
+print(dd)  # 还有arr.cumsum() 和arr.cumprod()
