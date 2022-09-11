@@ -26,4 +26,6 @@ print(len(soup.find_all('a')))
 for a in soup.find_all('a'):
     print(a.find_all('span'))
     print(a.string)
-
+print(soup.find_all(attrs={'class': 'sister'}))
+print(soup.find_all(class_ = 'sister'))  # 和上面一样
+print(soup.find_all(id='link3'))
